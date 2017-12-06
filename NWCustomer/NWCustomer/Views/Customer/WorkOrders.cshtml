@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "WorkOrders";
+}
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Company Name</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="@Url.Action("Index", "Customer")">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li class="active"><a href="#">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container">
+            <div class="container-fluid dashboard-horizontal">
+                <h1>Current Orders</h1>
+                <div class="row">
+                    <div class="btn-wrapper col-md-4 col-md-offset-2">
+                        <div>
+                            <a class="btn btn-default dashboard-btn" href="@Url.Action("NewOrder", "Customer")">
+                                New Work Order
+                            </a>
+                        </div>
+                        <div>
+                            <a class="btn btn-default dashboard-btn" href="@Url.Action("WorkOrders", "Customer")">
+                                Current Work Orders
+                            </a>
+                        </div>
+                        <div>
+                            <a class="btn btn-default dashboard-btn" href="@Url.Action("Dashboard", "Customer")">
+                                Recent Test
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container col-md-4 notifications">
+                        <button type="button" class="btn btn-info">
+                            Notifications <span class="badge badge-light">4</span>
+                        </button>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                            </tr>
+                            <tr>
+                                <td><span class="fa fa-envelope-o"></span></td>
+                                <td><a href="#">NEW TEST</a></td>
+                                <td>A new spot analysis test was required for...</td>
+                            </tr>
+                            <tr>
+                                <td><span class="fa fa-envelope-o"></span></td>
+                                <td><a href="#">NEW TEST</a></td>
+                                <td>A new Bromine test was required for...</td>
+                            </tr>
+                            <tr>
+                                <td><span class="fa fa-envelope-o"></span></td>
+                                <td><a href="#">ASSAY COMP...</a></td>
+                                <td>Your Biochemical Pharmacology was finis...</td>
+                            </tr>
+                            <tr>
+                                <td><span class="fa fa-envelope-o"></span></td>
+                                <td><a href="#">PAYMENT RE...</a></td>
+                                <td>Payment recieved for WO32894JT...</td>
+                            </tr>
+                            <tr>
+                                <td><span class="fa fa-envelope-open-o"></span></td>
+                                <td><a href="#">COMPOUND RE...</a></td>
+                                <td>Compound Chlorafimine was reci...</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid dashboard-horizontal dashboard-vertical">
+                <h3>Work Orders</h3>
+                <table class="table">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Submit Date</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Pending" })">WO38726AK</a></td>
+                        <td>2017-12-01</td>
+                        <td>Pending</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "In Progress" })">WO37982TI</a></td>
+                        <td>2017-10-11</td>
+                        <td>In Progress</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "In Progress" })">WO36983BP</a></td>
+                        <td>2017-06-19</td>
+                        <td>In Progress</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35443BP</a></td>
+                        <td>2017-04-22</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35443BP</a></td>
+                        <td>2017-04-22</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35489HG</a></td>
+                        <td>2017-01-18</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35428BF</a></td>
+                        <td>2016-11-19</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

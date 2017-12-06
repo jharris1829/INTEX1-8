@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "NewOrder";
+}
+<script>
+    $(document).ready(function () {
+        $('.mdb-select').material_select();
+    });
+</script>
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Company Name</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="@Url.Action("Index", "Customer")">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li class="active"><a href="#">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container">
+            <div class="container-fluid dashboard-horizontal">
+                <h1>Current Orders</h1>
+                <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                        </div>
+                        <div class="col-md-offset-1 col-md-11">
+                        </div>
+                </div>
+            </div>
+            <div class="container-fluid dashboard-horizontal dashboard-vertical">
+                <h3>Work Orders</h3>
+                <table class="table">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Submit Date</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Pending" })">WO38726AK</a></td>
+                        <td>2017-12-01</td>
+                        <td>Pending</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "In Progress" })">WO37982TI</a></td>
+                        <td>2017-10-11</td>
+                        <td>In Progress</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "In Progress" })">WO36983BP</a></td>
+                        <td>2017-06-19</td>
+                        <td>In Progress</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35443BP</a></td>
+                        <td>2017-04-22</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35443BP</a></td>
+                        <td>2017-04-22</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35489HG</a></td>
+                        <td>2017-01-18</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Details", "Customer", new { type = "Complete" })">WO35428BF</a></td>
+                        <td>2016-11-19</td>
+                        <td>Complete</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

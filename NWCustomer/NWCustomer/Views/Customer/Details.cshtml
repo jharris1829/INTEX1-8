@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Company Name</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="@Url.Action("Index", "Customer")">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li class="active"><a href="@Url.Action("WorkOrders", "Customer")">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container">
+            <div class="container-fluid dashboard-horizontal">
+                <div class="container dashboard-header">
+                    <h3>Details</h3>
+                    <h2>Status: @ViewBag.Type</h2>
+                </div>
+                <div class="container dashboard-vertical col-md-8">
+                    <table class="table">
+                        <tr>
+                            <th>Time</th>
+                            <th>Update</th>
+                            <th></th>
+                        </tr>
+                        @if (ViewBag.Type == "Pending")
+                        {
+                            <tr>
+                                <td>2017-12-5 08:46:58</td>
+                                <td>Work order WO38726AK submitted --- Awaiting Arrival</td>
+                                <td></td>
+                            </tr>
+                        }
+                        else if (ViewBag.Type == "In Progress")
+                        {
+                            <tr>
+                                <td>2017-11-24 14:04:54</td>
+                                <td>Finished Salicylate testing for Hydrolase -- Results Available</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-11-24 07:30:21</td>
+                                <td>Started Salicylate testing for Hydrolase</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-11-22 17:34:33</td>
+                                <td>Work order WO37982TI arrived at facility</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-11-05 10:26:50</td>
+                                <td>Work order WO37982TI submitted --- Awaiting Arrival</td>
+                                <td></td>
+                            </tr>
+                        }
+                        else if (ViewBag.Type == "Complete")
+                        {
+                            <tr>
+                                <td>2017-09-6 14:04:54</td>
+                                <td>Finished Spot Analysis for Glyceraldehyde -- Results Avaliable</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-09-6 07:30:21</td>
+                                <td>Started Spot Analysis for Glyceraldehyde</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-09-6 24:05:32</td>
+                                <td>NEW TEST NEEDED - Spot Analysis</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-09-6 14:04:54</td>
+                                <td>Finished Salicylate testing for Glyceraldehyde -- Results Avaliable</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-09-6 07:30:21</td>
+                                <td>Started Salicylate testing for Glyceraldehyde</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-08-30 17:34:33</td>
+                                <td>Work order WO37982TI arrived at facility</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2017-08-15 10:26:50</td>
+                                <td>Work order WO37982TI submitted --- Awaiting Arrival</td>
+                                <td></td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                <div class="container col-md-4">
+                    <table class="table">
+                        <tr>
+                            <th>Test</th>
+                            <th>Cost</th>
+                            <th></th>
+                        </tr>
+                        @if (ViewBag.Type == "Pending")
+                        {
+                            <tr>
+                                <td>--Awaiting Compound--</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        }
+                        else if (ViewBag.Type == "In Progress")
+                        {
+                            <tr>
+                                <td>Salicylate testing</td>
+                                <td>$119.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Total
+                                </th>
+                                <th>
+                                    $119.00
+                                </th>
+                            </tr>
+                        }
+                        else if (ViewBag.Type == "Complete")
+                        {
+                            <tr>
+                                <td>Salicylate testing</td>
+                                <td>$119.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Spot Analysis</td>
+                                <td>$248.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Total
+                                </th>
+                                <th>
+                                    $367.00
+                                </th>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            <div class="container-fluid dashboard-horizontal">
+
+            </div>
+        </div>
+    </div>
+
+</div>

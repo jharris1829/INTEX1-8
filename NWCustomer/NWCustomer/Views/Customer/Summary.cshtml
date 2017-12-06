@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "Summary";
+}
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Company Name</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li class="active"><a href="@Url.Action("Index", "Customer")">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li><a href="@Url.Action("WorkOrders", "Customer")">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container">
+            <div class="container-fluid dashboard-horizontal">
+                <div class="container-fluid summary-table col-md-offset-4">
+                    <h1>Summary for test 394869-1</h1>
+                    <dl class="dl-horizontal">
+                        <dt>Result: </dt>
+                        <dd>Pass</dd>
+                        <dt>Compound: </dt>
+                        <dd>Concanavalin A</dd>
+                        <dt>Test: </dt>
+                        <dd>Salicylate testing</dd>
+                        <dt>Work Order: </dt>
+                        <dd>WO34876TI</dd>
+                        <dt>Start Time</dt>
+                        <dd>2017-10-08 08:43:44</dd>
+                        <dt>End Time</dt>
+                        <dd>2017-10-08 18:32:50</dd>
+                        <dt>Additional Tests: </dt>
+                        <dd>Yes</dd>
+                        <dt>: </dt>
+                        <dd>Spot Analysis</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="container-fluid dashboard-horizontal dashboard-vertical">
+                <h3>Completed Tests</h3>
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Test</th>
+                        <th>Date</th>
+                        <th>Compound</th>
+                        <th>Summary</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">394869-1</a></td>
+                        <td>BP</td>
+                        <td>2017-12-01</td>
+                        <td>Concanavalin A</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348576-4</a></td>
+                        <td>DS</td>
+                        <td>2017-10-11</td>
+                        <td>Phramine</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348759-2</a></td>
+                        <td>PS</td>
+                        <td>2017-06-19</td>
+                        <td>Pradeg</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">394869-1</a></td>
+                        <td>BP</td>
+                        <td>2017-04-01</td>
+                        <td>Proponanol</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348576-4</a></td>
+                        <td>CS</td>
+                        <td>2017-03-11</td>
+                        <td>Trimethoprim</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348759-2</a></td>
+                        <td>IS</td>
+                        <td>2017-01-19</td>
+                        <td>Dimothiliam</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">394869-1</a></td>
+                        <td>BP</td>
+                        <td>2016-12-01</td>
+                        <td>Concanavalin A</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348576-4</a></td>
+                        <td>DS</td>
+                        <td>2016-10-11</td>
+                        <td>Phramine</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("Dashboard", "Customer")">348759-2</a></td>
+                        <td>PS</td>
+                        <td>2016-06-19</td>
+                        <td>Menthonalim</td>
+                        <td><a href="@Url.Action("Summary", "Customer")">View</a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

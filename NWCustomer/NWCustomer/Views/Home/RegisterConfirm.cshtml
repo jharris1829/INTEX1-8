@@ -1,0 +1,21 @@
+﻿@model NWCustomer.Models.PotentialsViewModel
+
+@{
+    ViewBag.Title = "RegisterConfirm";
+}
+
+<div class="login-bg">
+    <div class="login-card">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <img src="~/Content/images/NW_logo.png" style="height: 70px; display: block; margin: auto" />
+            <hr /> <br />
+            <p>Thank you for registering! We are excited to start working with @Model.CompanyName we will be in touch shortly.</p>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
