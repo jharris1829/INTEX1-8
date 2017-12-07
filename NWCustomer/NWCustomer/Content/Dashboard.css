@@ -17,9 +17,10 @@
     background-color: rgba(240,243,243,0.6);
 }
 
-    #sidebar .sidebar-header {
+    #sidebar .sidebar-header h3 {
+        font-size: 25px;
         padding: 20px;
-        font-family: Dubai;
+        font-family: Georgia;
     }
 
     #sidebar p {
@@ -84,8 +85,8 @@
     height: 40vh;
 }
 
-    .dashboard-horizontal > h1 {
-        font-family: inherit;
+    .dashboard-horizontal h1 {
+        font-family: Georgia;
         font-weight: normal;
         text-align: center;
         margin: 35px;
@@ -125,7 +126,7 @@
 
 .dashboard-btn {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
     .dashboard-btn {
         background-color: darkgrey;
@@ -140,4 +141,5 @@
 
 .row {
     padding: 40px;
+    margin: 0;
 }
