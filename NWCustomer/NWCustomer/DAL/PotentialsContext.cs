@@ -21,5 +21,7 @@ namespace NWCustomer.DAL
         public DbSet<testTube> testTube { get; set; }
         public DbSet<Serialized_Tests> Serialized_Tests { get; set; }
         public DbSet<Assays> Assays { get; set; }
+        public DbSet<Invoices> Invoices { get; set; }
+        public DbSet<CustomerAccount> CustomerAccount { get; set; }
     }
 }

@@ -92,6 +92,8 @@ namespace NWCustomer.Controllers
             }
             WorkOrders workOrder = new WorkOrders();
             Compounds compounds = new Compounds();
+            Invoices invoice = new Invoices();
+            invoice.accID = 5;
             compounds.LTNum = 553645;
             compounds.compoundFinID = 2;
             if (ModelState.IsValid)
@@ -100,6 +102,9 @@ namespace NWCustomer.Controllers
                 db.SaveChanges();
                 compounds.workOrderID = workOrder.workOrderID;
                 db.Compounds.Add(compounds);
+                db.SaveChanges();
+                invoice.workOrderID = workOrder.workOrderID;
+                db.Invoices.Add(invoice);
                 db.SaveChanges();
             }
             foreach (string item in assayTests)
@@ -117,6 +122,7 @@ namespace NWCustomer.Controllers
                 {
                     testTube testTube = new testTube();
                     Serialized_Tests serializedTest = new Serialized_Tests();
+                    testTube.sampleID = sample.sampleID;
                     serializedTest.testID = item2.testID;
                     serializedTest.testName = "Prototype test";
                     if (ModelState.IsValid)
@@ -131,6 +137,7 @@ namespace NWCustomer.Controllers
                 foreach (var item3 in otherTests)
                 {
                     testTube testTube = new testTube();
+                    testTube.sampleID = sample.sampleID;
                     Serialized_Tests serializedTest = new Serialized_Tests();
                     serializedTest.testID = db.Database.SqlQuery<int>("SELECT Tests.testID FROM Tests WHERE Tests.testName = @p0", item3).FirstOrDefault();
                     serializedTest.testName = "Prototype test";

@@ -7,12 +7,11 @@ using System.Web;
 
 namespace NWCustomer.Models
 {
-    [Table("testTube")]
-    public class testTube
+    [Table("CustomerAccount")]
+    public class CustomerAccount
     {
         [Key]
-        public int testTubeID { get; set; }
-        public int serialID { get; set; }
-        public int sampleID { get; set; }
+        public int accID { get; set; }
+        public int custID { get; set; }
     }
 }
