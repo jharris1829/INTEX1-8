@@ -34,8 +34,13 @@
                 <div class="container dashboard-header">
                     <h3>Details</h3>
                     <h2>Status: @ViewBag.Type</h2>
+                    @if(ViewBag.Type == "Complete")
+                    {
+                        <h4><a href="#">Summary Report</a></h4>
+                    }
                 </div>
                 <div class="container dashboard-vertical col-md-8">
+                    <a href="#">Ammend Order</a>
                     <table class="table">
                         <tr>
                             <th>Time</th>
