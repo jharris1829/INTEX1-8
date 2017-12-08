@@ -110,7 +110,7 @@ namespace NWCustomer.Controllers
             foreach (string item in assayTests)
             { 
                 Samples sample = new Samples();
-                sample.assayID = db.Database.SqlQuery<int>("SELECT assayID FROM Assays WHERE Assays.name = @p0", "Biochemical Pharmacology").FirstOrDefault();
+                sample.assayID = db.Database.SqlQuery<int>("SELECT assayID FROM Assays WHERE Assays.name = @p0", item).FirstOrDefault();
                 sample.LTNum = compounds.LTNum;
                 if (ModelState.IsValid)
                 {
