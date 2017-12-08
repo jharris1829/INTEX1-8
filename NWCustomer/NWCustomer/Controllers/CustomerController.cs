@@ -75,19 +75,19 @@ namespace NWCustomer.Controllers
             {
                 assayTests.Add("PharmaScreen");
             }
-            if (form["option5"].ToString() == "true,false")
+            if (form["option6"].ToString() == "true,false")
             {
                 assayTests.Add("CustomScreen");
             }
-            if (form["option6"].ToString() == "true,false")
+            if (form["option7"].ToString() == "true,false")
             {
                 otherTests.Add("Spot Analysis");
             }
-            if (form["option7"].ToString() == "true,false")
+            if (form["option8"].ToString() == "true,false")
             {
                 otherTests.Add("Salicylate Testing");
             }
-            if (form["option8"].ToString() == "true,false")
+            if (form["option9"].ToString() == "true,false")
             {
                 otherTests.Add("Permanganate Index");
             }

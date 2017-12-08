@@ -226,15 +226,27 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Catalog.css" />
     <Content Include="Content\Dashboard.css" />
+    <Content Include="Content\font-awesome.css" />
     <Content Include="Content\Footer.css" />
+    <Content Include="Content\images\beakers.jpg" />
+    <Content Include="Content\images\chemicalMakeup.jpg" />
+    <Content Include="Content\images\hurricane.jpg" />
+    <Content Include="Content\images\microscope.jpg" />
+    <Content Include="Content\images\ms.jpg" />
     <Content Include="Content\images\NW_logo.png" />
     <Content Include="Content\images\pill.png" />
+    <Content Include="Content\images\pills.jpg" />
+    <Content Include="Content\images\regenenron.jpg" />
     <Content Include="Content\images\results.jpg" />
+    <Content Include="Content\images\results2.jpg" />
     <Content Include="Content\images\scientistsHappy.jpg" />
     <Content Include="Content\images\scientistsTest.jpg" />
+    <Content Include="Content\images\strategies.jpg" />
+    <Content Include="Content\images\testTubes.jpg" />
     <Content Include="Content\LandingPage.css" />
     <Content Include="Content\Login.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -251,6 +263,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\nwlabs - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
@@ -268,7 +286,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
