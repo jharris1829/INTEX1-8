@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "confirmationPage";
+}
+
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Wasatch Solutions</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li class="active"><a href="@Url.Action("Index", "Customer")">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li><a href="@Url.Action("WorkOrders", "Customer")">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container fixed">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    
+                    <h1>Your Work Order Has Processed Successfully!</h1>
+                    <br />
+                    
+                    <h2>Based on past data we estimate the price of your order to be roughly</h2>
+                    <h2>$1200 US Dollars</h2>
+                    <br />
+                    <br />
+                    <h3>Please send your compound to our office in Singapore</h3>
+                    <br />
+                    <strong>
+                        <p>77-85 Stamford Road,</p>
+                        <p>MPH Building,</p>
+                        <p> Singapore 178895</p>
+                        <br />
+                        <h1>Thank You!</h1>
+                    </strong>
+                    <br />
+                    <button onclick="myFunction()" class="btn btn bg-primary">Print this page</button>
+
+                    <script>
+                        function myFunction() {
+                            window.print();
+                        }
+                    </script>
+
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

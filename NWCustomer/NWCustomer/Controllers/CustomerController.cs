@@ -151,6 +151,11 @@ namespace NWCustomer.Controllers
                     }
                 }
             }
+            return RedirectToAction("confirmationPage", "Customer");
+            
+        }
+        public  ActionResult confirmationPage()
+        {
             return View();
         }
     }
