@@ -210,7 +210,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoices.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Potentials.cs" />
+    <Compile Include="Models\Potential_Customers.cs" />
     <Compile Include="Models\Samples.cs" />
     <Compile Include="Models\Serialized_Tests.cs" />
     <Compile Include="Models\Tests.cs" />
