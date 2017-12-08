@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace NWCustomer.Controllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         // GET: Customer
