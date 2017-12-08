@@ -14,6 +14,14 @@ namespace NWCustomer.DAL
 
         }
 
-        public DbSet<Potential> Potential { get; set; }
+        public DbSet<Potential_Customers> Potential_Customers { get; set; }
+        public DbSet<WorkOrders> WorkOrders { get; set; }
+        public DbSet<Compounds> Compounds { get; set; }
+        public DbSet<Samples> Samples { get; set; }
+        public DbSet<testTube> testTube { get; set; }
+        public DbSet<Serialized_Tests> Serialized_Tests { get; set; }
+        public DbSet<Assays> Assays { get; set; }
+        public DbSet<Invoices> Invoices { get; set; }
+        public DbSet<CustomerAccount> CustomerAccount { get; set; }
     }
 }

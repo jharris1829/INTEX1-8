@@ -154,9 +154,9 @@ namespace NWCustomer.Controllers
         {
             if (ModelState.IsValid)
             {
-                var potential = new Potential { CompanyName = model.CompanyName, ContactName = model.ContactName, ContactPhone = model.ContactPhone, ContactEmail = model.ContactEmail, Notes = model.Notes };
+                var potential = new Potential_Customers { CompanyName = model.CompanyName, ContactName = model.ContactName, ContactPhone = model.ContactPhone, ContactEmail = model.ContactEmail, Notes = model.Notes };
 
-                db.Potential.Add(potential);
+                db.Potential_Customers.Add(potential);
                 db.SaveChanges();
 
                 //if (result.Succeeded)

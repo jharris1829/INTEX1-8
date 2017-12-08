@@ -73,3 +73,15 @@ textarea {
     .navbar-inverse .navbar-nav > li > a:hover {
         color: #65B0AA;
     }
+
+label {
+    margin: 0;
+}
+
+.checkbox {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}

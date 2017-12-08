@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "New Order Entry";
+}
+
+<div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Wasatch Solutions</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li class="active"><a href="#">Home</a></li>
+            <li>
+                <!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Tests</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">394869-1</a></li>
+                    <li><a href="#">348576-4</a></li>
+                    <li><a href="#">348759-2</a></li>
+                </ul>
+            <li><a href="@Url.Action("WorkOrders", "Customer")">Work Orders</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container-fluid dashboard-wrapper">
+        <div class="container-fluid dashboard-container fixed">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>New Work Order</h2>
+                    @using (Html.BeginForm("OrderEntry", "Customer", FormMethod.Post, new { @class = "form-group" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <label for="firstName" class="sr-only">First Name</label>
+                        @Html.TextBox("Compound", "", new { type = "text", id = "compound", @class = "form-control", placeholder = "Type compound name here", required = true, autofocus = true })
+                        <br />
+                        
+                                <h3>Please Select Your Desired Assays From the Following List</h3>
+                                <br />
+                                <div class="row no-padding">
+                                    <table class="table-condensed">
+                                        <tr>
+                                            <td>@Html.CheckBox("option1", false, new { @class = "checkbox", id = "option1" })</td>
+                                            <td><label for="option1" type="checkbox">Biochemical Pharmacology</label></td>
+                                        <tr>
+                                            <td>@Html.CheckBox("option2", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option2" type="checkbox">DiscoveryScreen</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option3", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option3" type="checkbox">ImmunoScreen</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option4", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option4" type="checkbox">ProfilingScreen</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option5", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option5" type="checkbox">PharmaScreen</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option6", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option6" type="checkbox">CustomScreen</label></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                 <br />
+                                <h3>Please Select Your Desired Conditional Tests From the Following List</h3>
+                                <br />
+                                <div class="row no-padding">
+                                    <table class="table-condensed">
+                                        <tr>
+                                            <td>@Html.CheckBox("option7", false, new { @class = "checkbox", id = "option1" })</td>
+                                            <td><label for="option7" type="checkbox">Spot Analysis</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option8", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option8" type="checkbox">Salicylate Testing</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Html.CheckBox("option9", false, new { @class = "checkbox" })</td>
+                                            <td><label for="option9" type="checkbox">Permangenate Index</label></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br />
+                                <br />
+                           
+                          
+                        <button class="btn btn-lg btn-primary center" type="submit">Submit</button>
+                    }
+                </div>
+                <div class="col-lg-6">
+                    
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                   
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

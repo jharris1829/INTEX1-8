@@ -1,4 +1,5 @@
-﻿using NWCustomer.Models;
+﻿using NWCustomer.DAL;
+using NWCustomer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace NWCustomer.Controllers
 {
     public class HomeController : Controller
     {
+        private PotentialsContext db = new PotentialsContext();
         public ActionResult Index()
         {
             return View();
